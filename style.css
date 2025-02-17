@@ -1,0 +1,179 @@
+/* styles.css - Advanced, Animated & Weather Adaptive UI */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    padding: 20px;
+    transition: background 1s ease-in-out;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease-in-out;
+}
+
+/* Weather Adaptive Background Colors */
+.sunny {
+    background: linear-gradient(to right, #FFD700, #FF8C00);
+}
+
+.cloudy {
+    background: linear-gradient(to right, #B0C4DE, #778899);
+}
+
+.rainy {
+    background: linear-gradient(to right, #5D6D7E, #2C3E50);
+}
+
+.snowy {
+    background: linear-gradient(to right, #E0EAFD, #A9C8F2);
+}
+
+.stormy {
+    background: linear-gradient(to right, #2F4F4F, #000000);
+}
+
+/* Animations for Weather Effects */
+@keyframes fallingRain {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0px); }
+}
+
+@keyframes driftingClouds {
+    from { transform: translateX(-100px); }
+    to { transform: translateX(100px); }
+}
+
+@keyframes shiningSun {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+.weather-icon {
+    width: 100px;
+    animation: shiningSun 2s infinite alternate ease-in-out;
+}
+
+.rainy .weather-icon {
+    animation: fallingRain 1s infinite alternate ease-in-out;
+}
+
+.cloudy .weather-icon {
+    animation: driftingClouds 3s infinite alternate ease-in-out;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.city-input {
+    padding: 12px;
+    width: 70%;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background: transparent;
+    color: white;
+}
+
+.city-input::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+.search-btn {
+    padding: 12px;
+    border: none;
+    background: #000000;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.search-btn:hover {
+    background: #333333;
+}
+
+.weather-info {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.city-name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.temperature {
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffcc00;
+}
+
+.weather-description {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.forecast-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.hourly-forecast {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.forecast-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.forecast-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.weekly-forecast {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weekly-forecast div {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    margin: 5px;
+    border-radius: 8px;
+    width: 90%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.weekly-forecast div:hover {
+    background: rgba(255, 255, 255, 0.3);
+}

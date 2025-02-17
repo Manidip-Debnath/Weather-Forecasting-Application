@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="app-title">The Weather Forecasting</h1>
+            <p id="date-time" class="date-time">2023-06-20 13:27 GMT</p>
+        </header>
+        <div class="search-box">
+            <input type="text" id="city-input" class="city-input" placeholder="Enter your location...">
+            <button id="search-btn" class="search-btn">Enter</button>
+        </div>
+        <div class="weather-info">
+            <h2 id="city-name" class="city-name">London, GB</h2>
+            <p id="current-date" class="current-date">Today 20 Jun</p>
+            <div class="weather-details">
+                <h1 id="temperature" class="temperature">22°C</h1>
+                <img id="weather-icon" class="weather-icon" src="" alt="Weather icon">
+                <p id="weather-description" class="weather-description">Scattered clouds</p>
+            </div>
+            <div class="air-conditions">
+                <div class="condition-item"><span class="label">Real Feel:</span> <span id="real-feel">22°C</span></div>
+                <div class="condition-item"><span class="label">Wind:</span> <span id="wind-speed">6.69 m/s</span></div>
+                <div class="condition-item"><span class="label">Clouds:</span> <span id="cloud-coverage">40%</span></div>
+                <div class="condition-item"><span class="label">Humidity:</span> <span id="humidity">70%</span></div>
+            </div>
+        </div>
+        <div class="forecast">
+            <h3 class="forecast-title">Today's Forecast</h3>
+            <div class="hourly-forecast">
+                <div class="forecast-item">
+                    <p class="time">15:00</p>
+                    <img class="forecast-icon" src="" alt="">
+                    <p class="temp">23°C</p>
+                </div>
+                <div class="forecast-item">
+                    <p class="time">18:00</p>
+                    <img class="forecast-icon" src="" alt="">
+                    <p class="temp">23°C</p>
+                </div>
+                <div class="forecast-item">
+                    <p class="time">21:00</p>
+                    <img class="forecast-icon" src="" alt="">
+                    <p class="temp">19°C</p>
+                </div>
+            </div>
+            <h3 class="forecast-title">Weekly Forecast</h3>
+            <div class="weekly-forecast" id="weekly-forecast"></div>
+        </div>
+    </div>
+</body>
+</html>
